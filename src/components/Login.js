@@ -16,7 +16,9 @@ const Login = ({ address }) => {
                 {Boolean(address) ? 'Log out' : 'Log in'}
             </button>
 
-            {address}
+            <div>
+                Address: {address}
+            </div>
         </div>
     );
 }

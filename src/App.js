@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import * as fcl from '@onflow/fcl'
+import React, { useState, useEffect } from 'react';
+import * as fcl from '@onflow/fcl';
 
-import Login from './components/Login'
+import Login from './components/Login';
+import Message from './components/Message';
 
 function App() {
   const [address, setAddress] = useState(null)
@@ -13,6 +14,7 @@ function App() {
   return (
     <div>
       <Login address={address} />
+      <Message />
     </div>
   );
 }
