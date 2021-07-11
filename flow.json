@@ -1,0 +1,44 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"MessageBoard": "./cadence/contracts/MessageBoard.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "dbacefbe130385fd5d15d90a3da256c639f718715a18cdf65e661d9dcdf00995"
+		},
+		"testnet-admin": {
+			"address": "a71cbec87013c09f",
+			"keys": [
+				{
+					"type": "hex",
+					"index": 0,
+					"signatureAlgorithm": "ECDSA_secp256k1",
+					"hashAlgorithm": "SHA3_256",
+					"context": {
+						"privateKey": "d7912c98e50daac9df80ba2661b9aa881ad0c523017cc574725304356c04b389"
+					}
+				}
+			],
+			"chain": "flow-testnet"
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"testnet-admin": [
+				"MessageBoard"
+			]
+		}
+	}
+}
